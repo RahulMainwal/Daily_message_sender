@@ -13,6 +13,8 @@ app.use(bodyParser.json()).use(cors());
 app.get("/", (req, res) => {
   res.json("Hello, Server is connected ! 👋");
 });
+const date = new Date();
+console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
 scheduler.schedule("  * * * * * * ", function () {
 //   nodemailer.createTestAccount((err, account) => {
 //     if (err) {
