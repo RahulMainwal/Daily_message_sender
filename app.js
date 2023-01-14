@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
 // console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
 scheduler.schedule("  * 7 21 * * * ", function () {
 
+  const date = new Date().toLocaleString('en-US', {
+  timeZone: "Asia/Calcutta"
+});
+  console.log(date)
   
 //   nodemailer.createTestAccount((err, account) => {
 //     if (err) {
