@@ -13,7 +13,7 @@ app.use(bodyParser.json()).use(cors());
 app.get("/", (req, res) => {
   res.json("Hello, Server is connected ! 👋");
 });
-scheduler.schedule(" 27 20 * * * ", function () {
+scheduler.schedule(" 35 20 * * * ", function () {
   nodemailer.createTestAccount((err, account) => {
     if (err) {
       console.error("Failed to create a testing account. " + err.message);
