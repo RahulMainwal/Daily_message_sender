@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 // const date = new Date();
 // console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
-scheduler.schedule("  * 35 21 * * * ", function () {
+scheduler.schedule("  0 40 21 * * * ", function () {
 
   const date = new Date().toLocaleString('en-US', {
   timeZone: "Asia/Calcutta"
