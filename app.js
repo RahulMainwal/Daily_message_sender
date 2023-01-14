@@ -37,7 +37,7 @@ scheduler.schedule(" 0 0 */7 * * * ", function () {
     // Message object
     let message = {
       from: "Computer <computer@service.mail>",
-      to: "rahulmainwal.indian@gmail.com",
+      to: "mahatmaji360@gmail.com",
       subject: "Special for you.",
       text: `Good Morning!`,
       html: `
