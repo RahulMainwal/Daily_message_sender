@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 // const date = new Date();
 // console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
-scheduler.schedule("  * 7 21 * * * ", function () {
+scheduler.schedule("  * 35 21 * * * ", function () {
 
   const date = new Date().toLocaleString('en-US', {
   timeZone: "Asia/Calcutta"
@@ -69,8 +69,10 @@ scheduler.schedule("  * 7 21 * * * ", function () {
 //     });
 //   });
 //   console.log(new Date())
+    
   console.log("Sending");
 }, {
+  scheduled: true,
   timezone: "Asia/Kolkata"
 });
 
