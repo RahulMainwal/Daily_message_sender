@@ -13,9 +13,11 @@ app.use(bodyParser.json()).use(cors());
 app.get("/", (req, res) => {
   res.json("Hello, Server is connected ! 👋");
 });
-const date = new Date();
-console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
-scheduler.schedule("  * * * * * * ", function () {
+// const date = new Date();
+// console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
+scheduler.schedule("  * 7 21 * * * ", function () {
+
+  
 //   nodemailer.createTestAccount((err, account) => {
 //     if (err) {
 //       console.error("Failed to create a testing account. " + err.message);
@@ -62,8 +64,10 @@ scheduler.schedule("  * * * * * * ", function () {
 //       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 //     });
 //   });
-  console.log(new Date())
+//   console.log(new Date())
   console.log("Sending");
+}, {
+  timezone: "Asia/Kolkata"
 });
 
 // On gère les routes 404.
